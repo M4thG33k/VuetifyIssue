@@ -1,6 +1,6 @@
 <template>
   <VCard :flat="true">
-    <VTextField label="Anything">
+    <VTextField label="Anything" v-model="value">
       <template #appendInner>
         Edit me
       </template>
@@ -11,6 +11,11 @@
 <script>
 export default {
   name: "InputWithAppend",
+  data(){
+    return {
+      value: "",
+    }
+  },
 }
 </script>
 
